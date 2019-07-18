@@ -172,7 +172,7 @@ class DatadogSync:
         if top_average_metrics:
             for t in top_average_metrics['usage']:
                 singer.write_record(stream, t)
-            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'))
+            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m'))
 
     async def sync_trace_search(self, schema):
         """Incidents."""
