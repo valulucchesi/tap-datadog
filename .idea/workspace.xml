@@ -39,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tap_datadog/sync.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="158" column="119" selection-start-line="158" selection-start-column="119" selection-end-line="158" selection-end-column="119" />
+            <state relative-caret-position="164">
+              <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
               <folding>
                 <element signature="e#1#15#0" expanded="true" />
               </folding>
@@ -77,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="146">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
@@ -126,6 +126,7 @@
       <find>future</find>
       <find>FUTUR</find>
       <find>LOGGER</find>
+      <find>urllib</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -232,13 +233,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.63003665" visible="true" weight="0.15491329" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.65384614" weight="0.38612717" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63003665" weight="0.31098264" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.6532357" visible="true" weight="0.38612717" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32911393" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32911393" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.36996338" side_tool="true" visible="true" weight="0.15491329" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.34676436" side_tool="true" visible="true" weight="0.38612717" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -255,9 +256,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file:///usr/local/lib/python3.7/site-packages/requests/models.py</url>
-          <line>919</line>
-          <option name="timeStamp" value="18" />
+          <url>file://$PROJECT_DIR$/tap_datadog/sync.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tap_datadog/sync.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -429,20 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="919" selection-start-line="919" selection-end-line="919" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tap_datadog/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -453,10 +445,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="919" selection-start-line="919" selection-end-line="919" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tap_datadog/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="158" column="119" selection-start-line="158" selection-start-column="119" selection-end-line="158" selection-end-column="119" />
+        <state relative-caret-position="164">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
           <folding>
             <element signature="e#1#15#0" expanded="true" />
           </folding>

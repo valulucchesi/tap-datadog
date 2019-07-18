@@ -3,7 +3,7 @@ import asyncio
 
 import singer
 import requests
-from future.backports import urllib
+import urllib
 from requests import HTTPError
 from singer.bookmarks import write_bookmark, get_bookmark
 from pendulum import datetime
@@ -47,9 +47,9 @@ class DatadogClient:
                 response.raise_for_status()
                 return response
 
-    def hourly_request(self, state, config, query):
+    def hourly_request(self, state, config, query, stream):
         try:
-            bookmark = get_bookmark(state, "trace_search", "since")
+            bookmark = get_bookmark(state, stream, "since")
             if bookmark:
                 start_date = bookmark
             else:
@@ -108,7 +108,7 @@ class DatadogSync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["hour"])
-        logs = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"logs" )
+        logs = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"logs", stream)
         if logs:
             for log in logs['usage']:
                 singer.write_record(stream, log)
@@ -120,7 +120,7 @@ class DatadogSync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["hour"])
-        custom_usage = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"timeseries")
+        custom_usage = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"timeseries", stream)
         if custom_usage:
             for c in custom_usage['usage']:
                 singer.write_record(stream, c)
@@ -132,7 +132,7 @@ class DatadogSync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["hour"])
-        fargates = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"fargate")
+        fargates = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"fargate", stream)
         if fargates:
             for fargate in fargates['usage']:
                 singer.write_record(stream, fargate)
@@ -144,7 +144,7 @@ class DatadogSync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["hour"])
-        hosts = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"hosts")
+        hosts = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"hosts", stream)
         if hosts:
             for host in hosts['usage']:
                 singer.write_record(stream, host)
@@ -156,7 +156,7 @@ class DatadogSync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["hour"])
-        synthetics = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"synthetics")
+        synthetics = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"synthetics", stream)
         if synthetics:
             for synthetic in synthetics['usage']:
                 singer.write_record(stream, synthetic)
@@ -180,7 +180,7 @@ class DatadogSync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["hour"])
-        trace_search = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"traces")
+        trace_search = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"traces", stream)
         if trace_search:
             for trace in trace_search['usage']:
                 singer.write_record(stream, trace)
