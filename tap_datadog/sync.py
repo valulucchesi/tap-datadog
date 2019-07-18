@@ -54,9 +54,12 @@ class DatadogClient:
                 start_date = bookmark
             else:
                 start_date = config['start_hour']
-            data = {'start_hr': start_date, 'end_hr': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H')}
-            traces = self._get(query,  data=data)
-            return traces.json()
+            if start_date != datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'):
+                data = {'start_hr': start_date, 'end_hr': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H')}
+                traces = self._get(query,  data=data)
+                return traces.json()
+            else:
+                return None
         except Exception as error:
             LOGGER.error(error)
             return None
@@ -167,7 +170,7 @@ class DatadogSync:
         stream = "top_average_metrics"
         loop = asyncio.get_event_loop()
 
-        singer.write_schema(stream, schema.to_dict(), ["metric_name"])
+        singer.write_schema(stream, schema.to_dict(), [])
         top_average_metrics = await loop.run_in_executor(None, self.client.top_avg_metrics, self.state, self.config)
         if top_average_metrics:
             for t in top_average_metrics['usage']:
