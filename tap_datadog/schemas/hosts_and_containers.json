@@ -4,217 +4,49 @@
     "object"
   ],
   "properties": {
-    "id": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "type": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "summary": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "self": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "html_url": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "name": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "escalation_rules":{
-      "type":[
-        "null",
-        "array"
-      ],
-      "items":{
-        "type":[
-          "null",
-          "object"
-        ],
-        "properties":{
-          "id":{
-            "type":[
-              "null",
-              "string"
-            ]
-          },
-          "escalation_delay_in_minutes":{
-            "type":[
-              "null",
-              "integer"
-            ]
-          },
-          "targets":{
-            "type":[
-              "null",
-              "array"
-            ],
-            "items":{
-              "type":[
-                "null",
-                "object"
-              ],
-              "properties":{
-                "id":{
-                  "type":[
-                    "null",
-                    "string"
-                  ]
-                },
-                "type":{
-                  "type":[
-                    "null",
-                    "string"
-                  ]
-                },
-                "summary":{
-                  "type":[
-                    "null",
-                    "string"
-                  ]
-                },
-                "self":{
-                  "type":[
-                    "null",
-                    "string"
-                  ]
-                },
-                "html_url":{
-                  "type":[
-                    "null",
-                    "string"
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "services": {
-      "type": [
-        "null",
-        "array"
-      ],
-      "items": {
-        "type": [
-          "null",
-          "object"
-        ],
-        "properties": {
-          "id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "type": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "summary": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "self": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "html_url": {
-            "type": [
-              "null",
-              "string"
-            ]
-          }
-        }
-      }
-    },
-    "num_loops": {
+    "container_count":{
       "type": [
         "null",
         "integer"
       ]
     },
-    "teams": {
+    "host_count":{
       "type": [
         "null",
-        "array"
-      ],
-      "items": {
-        "type": [
-          "null",
-          "object"
-        ],
-        "properties": {
-          "id": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "type": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "summary": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "self": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "html_url": {
-            "type": [
-              "null",
-              "string"
-            ]
-          }
-        }
-      }
-    },
-    "description": {
-      "type": [
-        "null",
-        "string"
+        "integer"
       ]
     },
-    "privilege": {
+    "hour": {
       "type": [
         "null",
         "string"
+      ],
+      "format": "date-time"
+    },
+    "apm_host_count":{
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "agent_host_count":{
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "gcp_host_count":{
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "aws_host_count":{
+      "type": [
+        "null",
+        "integer"
       ]
     }
   }
+
 }
