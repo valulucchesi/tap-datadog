@@ -3,9 +3,8 @@ import os
 import singer
 import asyncio
 import simplejson
-import concurrent.futures
+
 from singer import utils, metadata
-from singer.catalog import Catalog
 
 from tap_datadog.sync import DatadogAuthentication, DatadogClient, DatadogSync
 

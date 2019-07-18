@@ -167,7 +167,7 @@ class DatadogSync:
         stream = "top_average_metrics"
         loop = asyncio.get_event_loop()
 
-        singer.write_schema(stream, schema.to_dict(), ["hour"])
+        singer.write_schema(stream, schema.to_dict(), ["metric_name"])
         top_average_metrics = await loop.run_in_executor(None, self.client.top_avg_metrics, self.state, self.config)
         if top_average_metrics:
             for t in top_average_metrics['usage']:
