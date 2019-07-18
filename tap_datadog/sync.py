@@ -156,7 +156,7 @@ class DatadogSync:
         loop = asyncio.get_event_loop()
 
         singer.write_schema(stream, schema.to_dict(), ["hour"])
-        synthetics = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"synthetic")
+        synthetics = await loop.run_in_executor(None, self.client.hourly_request, self.state, self.config, f"synthetics")
         if synthetics:
             for synthetic in synthetics['usage']:
                 singer.write_record(stream, synthetic)
