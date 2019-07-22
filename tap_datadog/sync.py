@@ -115,7 +115,7 @@ class DatadogSync:
         if logs:
             for log in logs['usage']:
                 singer.write_record(stream, log)
-            self.state = write_bookmark(self.state, stream, "since", logs['usage'][len(logs['usage'])-1]['hour'])
+            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'))
 
     async def sync_custom_usage(self, schema):
         """Get hourly usage for custom metric."""
@@ -127,7 +127,7 @@ class DatadogSync:
         if custom_usage:
             for c in custom_usage['usage']:
                 singer.write_record(stream, c)
-            self.state = write_bookmark(self.state, stream, "since", custom_usage['usage'][len(custom_usage['usage'])-1]['hour'])
+            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'))
 
     async def sync_fargate(self, schema):
         """Incidents."""
@@ -139,7 +139,7 @@ class DatadogSync:
         if fargates:
             for fargate in fargates['usage']:
                 singer.write_record(stream, fargate)
-            self.state = write_bookmark(self.state, stream, "since", fargate['usage'][len(fargate['usage'])-1]['hour'])
+            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'))
 
     async def sync_hosts_and_containers(self, schema):
         """Incidents."""
@@ -151,7 +151,7 @@ class DatadogSync:
         if hosts:
             for host in hosts['usage']:
                 singer.write_record(stream, host)
-            self.state = write_bookmark(self.state, stream, "since", hosts['usage'][len(hosts['usage'])-1]['hour'])
+            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'))
 
     async def sync_synthetics(self, schema):
         """Incidents."""
@@ -163,14 +163,14 @@ class DatadogSync:
         if synthetics:
             for synthetic in synthetics['usage']:
                 singer.write_record(stream, synthetic)
-            self.state = write_bookmark(self.state, stream, "since", synthetics['usage'][len(synthetics['usage'])-1]['hour'])
+            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'))
 
     async def sync_top_average_metrics(self, schema):
         """Incidents."""
         stream = "top_average_metrics"
         loop = asyncio.get_event_loop()
 
-        singer.write_schema(stream, schema.to_dict(), [])
+        singer.write_schema(stream, schema.to_dict(), ["metric_name"])
         top_average_metrics = await loop.run_in_executor(None, self.client.top_avg_metrics, self.state, self.config)
         if top_average_metrics:
             for t in top_average_metrics['usage']:
@@ -187,5 +187,5 @@ class DatadogSync:
         if trace_search:
             for trace in trace_search['usage']:
                 singer.write_record(stream, trace)
-            self.state = write_bookmark(self.state, stream, "since", trace_search['usage'][len(trace_search['usage'])-1]['hour'])
+            self.state = write_bookmark(self.state, stream, "since", datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'))
 
