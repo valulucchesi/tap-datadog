@@ -117,8 +117,6 @@ class DatadogSync:
                 singer.write_record(stream, log)
             if logs['usage'] is not None and len(logs['usage'])>0:
                 self.state = write_bookmark(self.state, stream, "since", logs['usage'][len(logs['usage'])-1]['hour'])
-            else:
-                self.state = write_bookmark(self.state, stream, "since", "2019-07-19T23")
 
     async def sync_custom_usage(self, schema):
         """Get hourly usage for custom metric."""
@@ -132,8 +130,6 @@ class DatadogSync:
                 singer.write_record(stream, c)
             if custom_usage['usage'] is not None and len(custom_usage['usage'])>0:
                 self.state = write_bookmark(self.state, stream, "since", custom_usage['usage'][len(custom_usage['usage'])-1]['hour'])
-            else:
-                self.state = write_bookmark(self.state, stream, "since", "2019-07-19T23")
 
     async def sync_fargate(self, schema):
         """Incidents."""
@@ -147,8 +143,6 @@ class DatadogSync:
                 singer.write_record(stream, fargate)
             if fargates['usage'] is not None and len(fargates['usage'])>0:
                 self.state = write_bookmark(self.state, stream, "since", fargate['usage'][len(fargate['usage'])-1]['hour'])
-            else:
-                self.state = write_bookmark(self.state, stream, "since", "2019-07-19T23")
 
     async def sync_hosts_and_containers(self, schema):
         """Incidents."""
@@ -162,8 +156,6 @@ class DatadogSync:
                 singer.write_record(stream, host)
             if hosts['usage'] is not None and len(hosts['usage'])>0:
                 self.state = write_bookmark(self.state, stream, "since", hosts['usage'][len(hosts['usage'])-1]['hour'])
-            else:
-                self.state = write_bookmark(self.state, stream, "since", "2019-07-19T23")
 
     async def sync_synthetics(self, schema):
         """Incidents."""
@@ -177,8 +169,6 @@ class DatadogSync:
                 singer.write_record(stream, synthetic)
             if synthetics['usage'] is not None and len(synthetics['usage']) > 0:
                 self.state = write_bookmark(self.state, stream, "since", synthetics['usage'][len(synthetics['usage'])-1]['hour'])
-            else:
-                self.state = write_bookmark(self.state, stream, "since", "2019-07-19T23")
 
     async def sync_top_average_metrics(self, schema):
         """Incidents."""
@@ -204,6 +194,4 @@ class DatadogSync:
                 singer.write_record(stream, trace)
             if trace_search['usage'] is not None and len(trace_search['usage']) > 0:
                 self.state = write_bookmark(self.state, stream, "since", trace_search['usage'][len(trace_search['usage'])-1]['hour'])
-            else:
-                self.state = write_bookmark(self.state, stream, "since", "2019-07-19T23")
 
