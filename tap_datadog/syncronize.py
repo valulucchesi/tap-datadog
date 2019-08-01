@@ -47,17 +47,24 @@ class DatadogClient:
                 response.raise_for_status()
                 return response
 
+    def generate_start_date(self, config, stream, key_bookmark, key_config, state):
+        bookmark = get_bookmark(state, stream, key_bookmark)
+        if bookmark:
+            return bookmark
+        else:
+            return config[key_config]
+
+
     def hourly_request(self, state, config, query, stream):
         try:
-            bookmark = get_bookmark(state, stream, "since")
-            if bookmark:
-                start_date = bookmark
-            else:
-                start_date = config['start_hour']
+            start_date = self.generate_start_date(config, stream, "since", "start_hour", state)
             if start_date != datetime.datetime.utcnow().strftime('%Y-%m-%dT%H'):
                 data = {'start_hr': start_date, 'end_hr': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H')}
-                traces = self._get(query,  data=data)
-                return traces.json()
+                result = self._get(query,  data=data)
+                if result is not None:
+                    return result.json()
+                else:
+                    return result
             else:
                 return None
         except Exception as error:
@@ -132,7 +139,7 @@ class DatadogSync:
                 self.state = write_bookmark(self.state, stream, "since", custom_usage['usage'][len(custom_usage['usage'])-1]['hour'])
 
     async def sync_fargate(self, schema):
-        """Incidents."""
+        """Get hourly usage for Fargate."""
         stream = "fargate"
         loop = asyncio.get_event_loop()
 
@@ -142,10 +149,10 @@ class DatadogSync:
             for fargate in fargates['usage']:
                 singer.write_record(stream, fargate)
             if fargates['usage'] is not None and len(fargates['usage'])>0:
-                self.state = write_bookmark(self.state, stream, "since", fargate['usage'][len(fargate['usage'])-1]['hour'])
+                self.state = write_bookmark(self.state, stream, "since", fargates['usage'][len(fargates['usage'])-1]['hour'])
 
     async def sync_hosts_and_containers(self, schema):
-        """Incidents."""
+        """Get hourly usage for Hosts and Containers."""
         stream = "hosts_and_containers"
         loop = asyncio.get_event_loop()
 
@@ -158,7 +165,7 @@ class DatadogSync:
                 self.state = write_bookmark(self.state, stream, "since", hosts['usage'][len(hosts['usage'])-1]['hour'])
 
     async def sync_synthetics(self, schema):
-        """Incidents."""
+        """get hourly usage for synthetics."""
         stream = "synthetics"
         loop = asyncio.get_event_loop()
 
@@ -171,7 +178,7 @@ class DatadogSync:
                 self.state = write_bookmark(self.state, stream, "since", synthetics['usage'][len(synthetics['usage'])-1]['hour'])
 
     async def sync_top_average_metrics(self, schema):
-        """Incidents."""
+        """get hourly usage for ."""
         stream = "top_average_metrics"
         loop = asyncio.get_event_loop()
 

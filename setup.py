@@ -12,7 +12,9 @@ setup(
     install_requires=[
         "singer-python>=5.0.12",
         "requests",
-        "pendulum"
+        "pendulum",
+        "pytest",
+        "requests_mock"
     ],
     entry_points="""
     [console_scripts]

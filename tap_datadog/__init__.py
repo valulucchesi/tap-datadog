@@ -6,7 +6,7 @@ import simplejson
 
 from singer import utils, metadata
 
-from tap_datadog.sync import DatadogAuthentication, DatadogClient, DatadogSync
+from tap_datadog.syncronize import DatadogAuthentication, DatadogClient, DatadogSync
 
 REQUIRED_CONFIG_KEYS = ["start_month",
                         "start_hour",
