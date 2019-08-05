@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dc3b7fc-39f6-4e48-baac-af5c15bbf050" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tap_datadog/schemas/hosts_and_containers.json" beforeDir="false" afterPath="$PROJECT_DIR$/tap_datadog/schemas/hosts_and_containers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tap_datadog/sync.py" beforeDir="false" afterPath="$PROJECT_DIR$/tap_datadog/sync.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tap_datadog/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-523">
-              <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+            <state relative-caret-position="360">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
               </folding>
@@ -27,20 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.7/site-packages/requests/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="919" selection-start-line="919" selection-end-line="919" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tap_datadog/sync.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="180" column="24" lean-forward="true" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
+            <state relative-caret-position="468">
+              <caret line="146" column="54" lean-forward="true" selection-start-line="146" selection-start-column="54" selection-end-line="146" selection-end-column="54" />
               <folding>
                 <element signature="e#1#15#0" expanded="true" />
               </folding>
@@ -48,46 +39,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tap_datadog/schemas/hosts_and_containers.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.7/site-packages/requests_mock/mocker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-227">
-              <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            <state relative-caret-position="3360">
+              <caret line="229" selection-start-line="229" selection-end-line="229" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.7/site-packages/singer/messages.py">
+        <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="241" column="4" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
+            <state relative-caret-position="8730">
+              <caret line="595" column="12" selection-start-line="595" selection-start-column="12" selection-end-line="595" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.7/site-packages/singer/utils.py">
+        <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/suite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="1560">
               <caret line="107" selection-start-line="107" selection-end-line="107" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -95,17 +69,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="1080">
               <caret line="78" selection-start-line="78" selection-end-line="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py">
+        <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="26565">
+              <caret line="1771" selection-start-line="1771" selection-end-line="1771" />
+              <folding>
+                <element signature="e#673#691#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tap_datadog/schemas/logs.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -134,8 +120,8 @@
       <list>
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/tap_datadog/__init__.py" />
-        <option value="$PROJECT_DIR$/tap_datadog/sync.py" />
         <option value="$PROJECT_DIR$/tap_datadog/schemas/hosts_and_containers.json" />
+        <option value="$PROJECT_DIR$/tap_datadog/sync.py" />
       </list>
     </option>
   </component>
@@ -146,10 +132,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="957" />
+    <option name="height" value="951" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,6 +161,39 @@
               <item name="tap-datadog" type="462c0819:PsiDirectoryNode" />
               <item name="tap_datadog" type="462c0819:PsiDirectoryNode" />
               <item name="schemas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tap-datadog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tap-datadog" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tap-datadog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="tap-datadog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Python 3.7 interpreter library" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="tap-datadog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Python 3.7 interpreter library" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tap-datadog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Python 3.7 interpreter library" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tap-datadog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Python 3.7 interpreter library" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="singer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,10 +259,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="957" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="956" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49763033" visible="true" weight="0.26800978" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49763033" visible="true" weight="0.22161172" />
       <window_info id="Structure" order="1" sideWeight="0.50236964" side_tool="true" weight="0.26495728" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -258,7 +277,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32911393" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32911393" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.37118438" side_tool="true" visible="true" weight="0.2716763" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.37118438" side_tool="true" visible="true" weight="0.2013889" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -396,8 +415,8 @@
     </entry>
     <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26550">
-          <caret line="1770" selection-start-line="1770" selection-end-line="1770" />
+        <state relative-caret-position="26565">
+          <caret line="1771" selection-start-line="1771" selection-end-line="1771" />
           <folding>
             <element signature="e#673#691#0" expanded="true" />
           </folding>
@@ -447,7 +466,7 @@
     </entry>
     <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/thread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
+        <state relative-caret-position="1080">
           <caret line="78" selection-start-line="78" selection-end-line="78" />
         </state>
       </provider>
@@ -459,10 +478,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tap_datadog/schemas/hosts_and_containers.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tap_datadog/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-523">
-          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
@@ -471,18 +497,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tap_datadog/sync.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="180" column="24" lean-forward="true" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
+        <state relative-caret-position="468">
+          <caret line="146" column="54" lean-forward="true" selection-start-line="146" selection-start-column="54" selection-end-line="146" selection-end-column="54" />
           <folding>
             <element signature="e#1#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tap_datadog/schemas/hosts_and_containers.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-227">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>

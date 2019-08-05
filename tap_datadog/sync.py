@@ -142,7 +142,7 @@ class DatadogSync:
             for fargate in fargates['usage']:
                 singer.write_record(stream, fargate)
             if fargates['usage'] is not None and len(fargates['usage'])>0:
-                self.state = write_bookmark(self.state, stream, "since", fargate['usage'][len(fargate['usage'])-1]['hour'])
+                self.state = write_bookmark(self.state, stream, "since", fargates['usage'][len(fargates['usage'])-1]['hour'])
 
     async def sync_hosts_and_containers(self, schema):
         """Incidents."""
